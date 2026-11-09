@@ -1,0 +1,47 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import projects from '../../data/projects.json';
+import profile from '../../data/profile.json';
+import '../../styles/global.css';
+
+export function getStaticPaths() {
+  return projects.map((p) => ({ params: { slug: p.slug }, props: { project: p } }));
+}
+
+const { project } = Astro.props;
+---
+<BaseLayout title={`${project.title} — ${profile.name}`} description={project.summary}>
+  <div class="wrap">
+    <header class="topbar">
+      <a class="brand" href="/">{profile.name}</a>
+      <nav class="nav">
+        <a href="/#proyectos">← Todos los proyectos</a>
+      </nav>
+    </header>
+
+    <article class="hero" style="margin-bottom: 2rem;">
+      <img src={project.image} alt="" width="640" height="360" style="max-width:100%; border-radius:8px; border:1px solid var(--line);" />
+      <h1 style="margin-top:1.25rem;">{project.title}</h1>
+      <p class="headline">{project.tagline}</p>
+      <p class="bio">{project.summary}</p>
+      <ul class="stack" style="margin-top:1rem;">
+        {project.stack.map((t) => <li>{t}</li>)}
+      </ul>
+    </article>
+
+    <section class="block">
+      <h2>Qué incluye este trabajo</h2>
+      <ul class="highlights" style="font-size:1rem; color: var(--ink);">
+        {project.highlights.map((h) => <li>{h}</li>)}
+      </ul>
+    </section>
+
+    <section class="block">
+      <h2>Código de muestra</h2>
+      <p style="color: var(--muted);">
+        En el repositorio del portafolio, carpeta <code>{project.repoPath}</code>.
+        Sin variables de entorno ni datos de terceros.
+      </p>
+    </section>
+  </div>
+</BaseLayout>

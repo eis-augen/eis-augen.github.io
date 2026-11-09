@@ -1,0 +1,17 @@
+{
+  "name": "Hashlaay Alderweireld",
+  "headline": "Desarrollo web, aplicaciones de escritorio y despliegue en producción",
+  "bio": "Construyo productos que salen del papel: consolas para flotas GPS, plataformas con base de datos, radios en línea, herramientas de escritorio para accesibilidad y sitios con backend en la nube. Me ocupo del frontend, de la API cuando hace falta, y de dejar el servicio montado de forma que aguante el día a día.",
+  "contact": {
+    "github": "https://github.com/eis-augen",
+    "note": "Reemplaza el usuario de GitHub si el tuyo es otro antes de publicar."
+  },
+  "skills": {
+    "frontend": ["React", "TypeScript", "Vite", "Astro", "Three.js / R3F"],
+    "backend": ["FastAPI", "Python", "Node.js", "Cloudflare Workers", "D1"],
+    "mobile": ["Android (Gradle / Kotlin)"],
+    "desktop": ["Electron"],
+    "datos": ["PostgreSQL", "Docker", "MinIO"],
+    "infra": ["Linux (VPS)", "WireGuard", "DNS (Unbound)", "Proxmox", "Caddy"]
+  }
+}

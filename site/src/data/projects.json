@@ -1,0 +1,115 @@
+[
+  {
+    "slug": "meine-kleine-welt",
+    "title": "meine kleine Welt",
+    "tagline": "Sitio editorial personal con escena 3D",
+    "stack": ["React 19", "TypeScript", "Vite", "React Three Fiber", "Cloudflare Workers", "D1"],
+    "summary": "Proyecto web propio: recinto de historias con secciones Svalia y El Cofre, animación de entrada en 3D, editor de entradas accesible y panel de administración. API en Worker con base D1; front desplegable en Pages.",
+    "highlights": [
+      "Editor rich text con foco en teclado y lectores de pantalla",
+      "Tema vintage y componentes de marca propios",
+      "Backend serverless sin exponer credenciales en el repositorio"
+    ],
+    "image": "/images/meinekleine.svg",
+    "repoLabel": "Muestra en GitHub",
+    "repoPath": "showcases/meine-kleine-world"
+  },
+  {
+    "slug": "qyron-werke",
+    "title": "Qyron Werke",
+    "tagline": "Suite de audio y vídeo para Windows",
+    "stack": ["Electron", "Vite", "TypeScript"],
+    "summary": "Aplicación de escritorio offline: cortar y mezclar audio, extraer pistas de vídeo, subtítulos y estudio de voz. Diseñada desde el inicio para personas ciegas o con baja visión (estados anunciados, textos claros, zoom de interfaz).",
+    "highlights": [
+      "Varias herramientas en un solo instalador",
+      "CI y empaquetado para Windows 64 bits",
+      "Sin envío de archivos a servidores externos"
+    ],
+    "image": "/images/qyron.svg",
+    "repoLabel": "Muestra en GitHub",
+    "repoPath": "showcases/qyron-werke"
+  },
+  {
+    "slug": "data-center",
+    "title": "Data Center",
+    "tagline": "Plataforma de fichas y multimedia",
+    "stack": ["React 19", "FastAPI", "PostgreSQL", "Docker", "Caddy"],
+    "summary": "Sistema para cargar, buscar y relacionar fichas con archivos adjuntos, auditoría y roles. Monorepo con web, API e infraestructura en contenedores; documentación de despliegue y respaldo.",
+    "highlights": [
+      "Búsqueda avanzada y grafo de relaciones",
+      "RBAC y trazas de auditoría",
+      "Guías de operación para administradores"
+    ],
+    "image": "/images/datacenter.svg",
+    "repoPath": "showcases/data-center"
+  },
+  {
+    "slug": "siss-fleet",
+    "title": "Consola de flota (SISS / Traccar)",
+    "tagline": "GPS, MDM y operación en campo",
+    "stack": ["React", "Vite", "Kotlin (cliente Android)"],
+    "summary": "Personalización del frontend Traccar para operación logística: mapas, dispositivos, rutas y flujos de enrolamiento. SDK Android para el cliente móvil. La muestra pública lleva solo código de interfaz, sin datos de clientes ni endpoints reales.",
+    "highlights": [
+      "Sincronización de estado en fichas de dispositivo",
+      "Integración con agente MDM en móvil",
+      "Arquitectura documentada sin IPs de producción"
+    ],
+    "image": "/images/fleet.svg",
+    "repoPath": "showcases/siss-fleet-platform"
+  },
+  {
+    "slug": "valknut",
+    "title": "Valknut Protocol",
+    "tagline": "Sitio estático en producción",
+    "stack": ["Astro", "Tailwind", "Cloudflare Workers"],
+    "summary": "Web de contenido en Markdown, build estático y entrega por Worker en el borde. Rutas raíz y www unificadas; proceso de deploy desde el repositorio.",
+    "highlights": [
+      "Contenido en colecciones Astro",
+      "HTTPS y DNS documentados",
+      "Rendimiento orientado a lectura"
+    ],
+    "image": "/images/valknut.svg",
+    "repoPath": "showcases/valknut-web"
+  },
+  {
+    "slug": "zona7radio",
+    "title": "Zona 7 Radio",
+    "tagline": "Ecosistema de radio en línea",
+    "stack": ["Android", "Node", "PHP"],
+    "summary": "App de escucha, controles de producción (mr_controles) y piezas para peticiones de canciones en el servidor. Varios módulos que comparten marca y streaming.",
+    "highlights": [
+      "Cliente Android para la emisora",
+      "Herramientas de cabina y scripts de despliegue",
+      "Integración con reproductor y metadatos now-playing"
+    ],
+    "image": "/images/radio.svg",
+    "repoPath": "showcases/zona7radio"
+  },
+  {
+    "slug": "latina-live",
+    "title": "Latina Live",
+    "tagline": "Radio web y cliente móvil",
+    "stack": ["Android", "Gradle"],
+    "summary": "Presencia en línea de emisora musical latina y aplicación asociada. Trabajo en Gradle y módulo app.",
+    "highlights": [
+      "Estructura Android estándar",
+      "Sitio web complementario en el mismo ecosistema"
+    ],
+    "image": "/images/latina.svg",
+    "repoPath": "showcases/latina-live"
+  },
+  {
+    "slug": "dns-privado",
+    "title": "DNS privado y acceso móvil",
+    "tagline": "Operación sin exposer resolvers",
+    "stack": ["WireGuard", "Unbound", "Linux"],
+    "summary": "Resolver DNS recursivo solo accesible por VPN, alta de móviles con QR (un dispositivo, un peer) y documentación operativa. Caso descrito sin credenciales ni IPs reales.",
+    "highlights": [
+      "DNSSEC y política de no reenvío a resolvers públicos",
+      "Onboarding de flota por código QR",
+      "Runbooks de alta y baja de usuarios"
+    ],
+    "image": "/images/infra.svg",
+    "repoPath": "showcases/infra-dns-portfolio"
+  }
+]

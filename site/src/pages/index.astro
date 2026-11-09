@@ -1,0 +1,88 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import profile from '../data/profile.json';
+import projects from '../data/projects.json';
+import '../styles/global.css';
+
+const skillLabels: Record<string, string> = {
+  frontend: 'Frontend',
+  backend: 'Backend y APIs',
+  mobile: 'Móvil',
+  desktop: 'Escritorio',
+  datos: 'Datos y despliegue',
+  infra: 'Infraestructura',
+};
+---
+<BaseLayout
+  title={`${profile.name} — portafolio`}
+  description={profile.bio}
+>
+  <div class="wrap">
+    <header class="topbar">
+      <a class="brand" href="/">{profile.name}</a>
+      <nav class="nav" aria-label="Secciones">
+        <a href="#proyectos">Proyectos</a>
+        <a href="#tecnologias">Tecnologías</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <h1>{profile.name}</h1>
+      <p class="headline">{profile.headline}</p>
+      <p class="bio">{profile.bio}</p>
+    </section>
+
+    <section id="tecnologias" class="block">
+      <h2>Tecnologías que uso</h2>
+      <div class="skills">
+        {Object.entries(profile.skills).map(([key, items]) => (
+          <div class="skill-group">
+            <h3>{skillLabels[key] ?? key}</h3>
+            <ul>
+              {items.map((item) => <li>{item}</li>)}
+            </ul>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <section id="proyectos" class="block">
+      <h2>Proyectos</h2>
+      <p style="color: var(--muted); margin: 0 0 1.5rem; max-width: 62ch;">
+        Cada tarjeta resume trabajo real. El código publicado es una copia sin secretos
+        ni datos de clientes, lista para revisar en GitHub.
+      </p>
+      <div class="projects">
+        {projects.map((p) => (
+          <article class="project-card">
+            <img src={p.image} alt="" width="400" height="225" loading="lazy" />
+            <div>
+              <h3><a href={`/proyectos/${p.slug}/`}>{p.title}</a></h3>
+              <p class="tag">{p.tagline}</p>
+              <p>{p.summary}</p>
+              <ul class="stack">
+                {p.stack.map((t) => <li>{t}</li>)}
+              </ul>
+              <ul class="highlights">
+                {p.highlights.map((h) => <li>{h}</li>)}
+              </ul>
+            </div>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <footer id="contacto" class="site-foot">
+      <p>
+        <strong>Consulta en línea:</strong> publica este sitio con GitHub Pages
+        (instrucciones en <code>PUBLICAR-GITHUB.md</code> en el repositorio del portafolio).
+      </p>
+      <p>
+        GitHub:
+        <a href={profile.contact.github} rel="noopener noreferrer">{profile.contact.github}</a>
+        — {profile.contact.note}
+      </p>
+    </footer>
+  </div>
+</BaseLayout>

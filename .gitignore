@@ -1,0 +1,11 @@
+node_modules/
+dist/
+.astro/
+.env
+.env.*
+*.pem
+*.key
+secrets/
+.DS_Store
+# Copias locales del Escritorio (muy pesadas para GitHub); regenerar con tools/sanitize-copy.ps1
+showcases/
