@@ -1,17 +1,18 @@
 {
   "name": "Hashlaay Alderweireld",
-  "headline": "Desarrollo web, aplicaciones de escritorio y despliegue en producción",
-  "bio": "Construyo productos que salen del papel: consolas para flotas GPS, plataformas con base de datos, radios en línea, herramientas de escritorio para accesibilidad y sitios con backend en la nube. Me ocupo del frontend, de la API cuando hace falta, y de dejar el servicio montado de forma que aguante el día a día.",
+  "headline": "Desarrollo web, escritorio, móvil e infraestructura que sí se usa en producción",
+  "bio": "Programo interfaces, APIs y scripts de operación, y me ocupo de que el servicio quede arriba: dominio, HTTPS, backups y acceso del equipo (VPN, DNS interno, consolas). Muchos proyectos los llevo en pareja con asistentes de código bajo mi revisión — el criterio final y lo que entra a producción son míos.",
   "contact": {
     "github": "https://github.com/eis-augen",
-    "note": "Reemplaza el usuario de GitHub si el tuyo es otro antes de publicar."
+    "label": "GitHub"
   },
   "skills": {
-    "frontend": ["React", "TypeScript", "Vite", "Astro", "Three.js / R3F"],
-    "backend": ["FastAPI", "Python", "Node.js", "Cloudflare Workers", "D1"],
-    "mobile": ["Android (Gradle / Kotlin)"],
+    "frontend": ["React", "TypeScript", "Vite", "Astro", "MUI", "Three.js / R3F", "MapLibre", "Tailwind"],
+    "backend": ["FastAPI", "Python", "Node.js", "Java (Traccar)", "Cloudflare Workers", "D1", "REST"],
+    "mobile": ["Android (Kotlin / Gradle)", "React Native"],
     "desktop": ["Electron"],
-    "datos": ["PostgreSQL", "Docker", "MinIO"],
-    "infra": ["Linux (VPS)", "WireGuard", "DNS (Unbound)", "Proxmox", "Caddy"]
+    "datos": ["PostgreSQL", "MariaDB", "Redis", "MinIO", "Docker", "Docker Compose"],
+    "infra": ["Linux", "Proxmox / LXC", "WireGuard", "Unbound", "Caddy", "Let's Encrypt", "GitHub Actions"],
+    "herramientas": ["Git", "Bash / PowerShell", "SSH y túneles", "Cursor", "Playwright", "Gradle", "Wrangler"]
   }
 }

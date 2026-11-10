@@ -11,6 +11,7 @@ const skillLabels: Record<string, string> = {
   desktop: 'Escritorio',
   datos: 'Datos y despliegue',
   infra: 'Infraestructura',
+  herramientas: 'Herramientas y flujo de trabajo',
 };
 ---
 <BaseLayout
@@ -34,7 +35,7 @@ const skillLabels: Record<string, string> = {
     </section>
 
     <section id="tecnologias" class="block">
-      <h2>Tecnologías que uso</h2>
+      <h2>Tecnologías</h2>
       <div class="skills">
         {Object.entries(profile.skills).map(([key, items]) => (
           <div class="skill-group">
@@ -49,23 +50,21 @@ const skillLabels: Record<string, string> = {
 
     <section id="proyectos" class="block">
       <h2>Proyectos</h2>
-      <p style="color: var(--muted); margin: 0 0 1.5rem; max-width: 62ch;">
-        Cada tarjeta resume trabajo real. El código publicado es una copia sin secretos
-        ni datos de clientes, lista para revisar en GitHub.
+      <p class="section-lead">
+        Trabajo publicado y en uso. Cada ficha lleva captura real de la interfaz.
       </p>
       <div class="projects">
         {projects.map((p) => (
           <article class="project-card">
-            <img src={p.image} alt="" width="400" height="225" loading="lazy" />
+            <a class="thumb" href={`/proyectos/${p.slug}/`}>
+              <img src={p.image} alt={`Captura de ${p.title}`} width="400" height="225" loading="lazy" />
+            </a>
             <div>
               <h3><a href={`/proyectos/${p.slug}/`}>{p.title}</a></h3>
               <p class="tag">{p.tagline}</p>
               <p>{p.summary}</p>
               <ul class="stack">
                 {p.stack.map((t) => <li>{t}</li>)}
-              </ul>
-              <ul class="highlights">
-                {p.highlights.map((h) => <li>{h}</li>)}
               </ul>
             </div>
           </article>
@@ -75,8 +74,7 @@ const skillLabels: Record<string, string> = {
 
     <footer id="contacto" class="site-foot">
       <p>
-        <strong>Contacto:</strong> código de muestra y repos en{' '}
-        <a href={profile.contact.github} rel="noopener noreferrer">GitHub</a>.
+        <a href={profile.contact.github} rel="noopener noreferrer">{profile.contact.label}</a>
       </p>
     </footer>
   </div>

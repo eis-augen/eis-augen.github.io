@@ -9,39 +9,47 @@ export function getStaticPaths() {
 }
 
 const { project } = Astro.props;
+const shots = project.shots ?? [project.image];
 ---
 <BaseLayout title={`${project.title} — ${profile.name}`} description={project.summary}>
   <div class="wrap">
     <header class="topbar">
       <a class="brand" href="/">{profile.name}</a>
       <nav class="nav">
-        <a href="/#proyectos">← Todos los proyectos</a>
+        <a href="/#proyectos">← Proyectos</a>
       </nav>
     </header>
 
-    <article class="hero" style="margin-bottom: 2rem;">
-      <img src={project.image} alt="" width="640" height="360" style="max-width:100%; border-radius:8px; border:1px solid var(--line);" />
-      <h1 style="margin-top:1.25rem;">{project.title}</h1>
+    <article class="project-detail">
+      <h1>{project.title}</h1>
       <p class="headline">{project.tagline}</p>
       <p class="bio">{project.summary}</p>
-      <ul class="stack" style="margin-top:1rem;">
+      {project.liveUrl && (
+        <p class="live-link">
+          <a href={project.liveUrl} rel="noopener noreferrer">Abrir sitio en línea</a>
+        </p>
+      )}
+      <ul class="stack" style="margin-top: 1rem;">
         {project.stack.map((t) => <li>{t}</li>)}
       </ul>
+
+      <section class="block">
+        <h2>En pantalla</h2>
+        <div class="shot-gallery">
+          {shots.map((src) => (
+            <figure>
+              <img src={src} alt={`${project.title} — captura`} loading="lazy" />
+            </figure>
+          ))}
+        </div>
+      </section>
+
+      <section class="block">
+        <h2>Detalle del trabajo</h2>
+        <ul class="detail-list">
+          {project.highlights.map((h) => <li>{h}</li>)}
+        </ul>
+      </section>
     </article>
-
-    <section class="block">
-      <h2>Qué incluye este trabajo</h2>
-      <ul class="highlights" style="font-size:1rem; color: var(--ink);">
-        {project.highlights.map((h) => <li>{h}</li>)}
-      </ul>
-    </section>
-
-    <section class="block">
-      <h2>Código de muestra</h2>
-      <p style="color: var(--muted);">
-        En el repositorio del portafolio, carpeta <code>{project.repoPath}</code>.
-        Sin variables de entorno ni datos de terceros.
-      </p>
-    </section>
   </div>
 </BaseLayout>
