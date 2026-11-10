@@ -5,13 +5,14 @@ import projects from '../data/projects.json';
 import '../styles/global.css';
 
 const skillLabels: Record<string, string> = {
+  lenguajes: 'Lenguajes',
   frontend: 'Frontend',
   backend: 'Backend y APIs',
   mobile: 'Móvil',
-  desktop: 'Escritorio',
-  datos: 'Datos y despliegue',
-  infra: 'Infraestructura',
-  herramientas: 'Herramientas',
+  escritorio: 'Escritorio',
+  datos: 'Bases de datos y contenedores',
+  servidores: 'Servidores y despliegue',
+  redes_seguridad: 'Redes, firewalls y seguridad',
 };
 ---
 <BaseLayout
@@ -50,9 +51,6 @@ const skillLabels: Record<string, string> = {
 
     <section id="proyectos" class="block">
       <h2>Proyectos</h2>
-      <p class="section-lead">
-        Trabajo publicado y en uso. Cada ficha lleva captura real de la interfaz.
-      </p>
       <div class="projects">
         {projects.map((p) => (
           <article class="project-card">

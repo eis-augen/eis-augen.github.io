@@ -1,18 +1,19 @@
 {
   "name": "Hashlaay Alderweireld",
-  "headline": "Desarrollo web, escritorio, móvil e infraestructura que sí se usa en producción",
-  "bio": "Programo interfaces, APIs y scripts de operación, y me ocupo de que el servicio quede arriba: dominio, HTTPS, backups y acceso del equipo (VPN, DNS interno, consolas).",
+  "headline": "Desarrollo full stack, aplicaciones de escritorio y operación de servidores",
+  "bio": "Trabajo en front y back (React, Python, Java/Kotlin), clientes Android y herramientas Electron. También preparo el entorno donde corren: Linux, contenedores, Proxmox, reverse proxy, certificados y acceso remoto del equipo.",
   "contact": {
     "github": "https://github.com/eis-augen",
     "label": "GitHub"
   },
   "skills": {
-    "frontend": ["React", "TypeScript", "Vite", "Astro", "MUI", "Three.js / R3F", "MapLibre", "Tailwind"],
-    "backend": ["FastAPI", "Python", "Node.js", "Java (Traccar)", "Cloudflare Workers", "D1", "REST"],
-    "mobile": ["Android (Kotlin / Gradle)", "React Native"],
-    "desktop": ["Electron"],
+    "lenguajes": ["HTML", "CSS", "JavaScript", "TypeScript", "Python", "Java", "Kotlin", "C++", "Lua", "PHP", "SQL", "Bash", "PowerShell"],
+    "frontend": ["React", "Vite", "Astro", "MUI", "Tailwind", "Three.js / R3F", "MapLibre"],
+    "backend": ["FastAPI", "Node.js", "Cloudflare Workers", "D1", "REST", "Traccar (Java)"],
+    "mobile": ["Android", "Gradle", "React Native"],
+    "escritorio": ["Electron"],
     "datos": ["PostgreSQL", "MariaDB", "Redis", "MinIO", "Docker", "Docker Compose"],
-    "infra": ["Linux", "Proxmox / LXC", "WireGuard", "Unbound", "Caddy", "Let's Encrypt", "GitHub Actions"],
-    "herramientas": ["Git", "Bash / PowerShell", "SSH y túneles", "Playwright", "Gradle", "Wrangler"]
+    "servidores": ["Linux", "Proxmox", "LXC", "Caddy", "Nginx", "GitHub Actions", "Let's Encrypt"],
+    "redes_seguridad": ["OPNsense", "pfSense", "WireGuard", "IPsec / IKEv2", "Unbound", "DNSSEC", "UFW", "VLAN", "NAT", "SSH / relay", "políticas firewall"]
   }
 }

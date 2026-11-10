@@ -34,7 +34,7 @@ const shots = project.shots ?? [project.image];
       </ul>
 
       <section class="block">
-        <h2>En pantalla</h2>
+        <h2>Capturas</h2>
         <div class="shot-gallery">
           {shots.map((src) => (
             <figure>
@@ -45,7 +45,7 @@ const shots = project.shots ?? [project.image];
       </section>
 
       <section class="block">
-        <h2>Detalle del trabajo</h2>
+        <h2>Notas</h2>
         <ul class="detail-list">
           {project.highlights.map((h) => <li>{h}</li>)}
         </ul>
