@@ -1,7 +1,7 @@
 {
   "name": "Hashlaay Alderweireld",
   "headline": "Desarrollo web, escritorio, móvil e infraestructura que sí se usa en producción",
-  "bio": "Programo interfaces, APIs y scripts de operación, y me ocupo de que el servicio quede arriba: dominio, HTTPS, backups y acceso del equipo (VPN, DNS interno, consolas). Muchos proyectos los llevo en pareja con asistentes de código bajo mi revisión — el criterio final y lo que entra a producción son míos.",
+  "bio": "Programo interfaces, APIs y scripts de operación, y me ocupo de que el servicio quede arriba: dominio, HTTPS, backups y acceso del equipo (VPN, DNS interno, consolas).",
   "contact": {
     "github": "https://github.com/eis-augen",
     "label": "GitHub"
@@ -13,6 +13,6 @@
     "desktop": ["Electron"],
     "datos": ["PostgreSQL", "MariaDB", "Redis", "MinIO", "Docker", "Docker Compose"],
     "infra": ["Linux", "Proxmox / LXC", "WireGuard", "Unbound", "Caddy", "Let's Encrypt", "GitHub Actions"],
-    "herramientas": ["Git", "Bash / PowerShell", "SSH y túneles", "Cursor", "Playwright", "Gradle", "Wrangler"]
+    "herramientas": ["Git", "Bash / PowerShell", "SSH y túneles", "Playwright", "Gradle", "Wrangler"]
   }
 }
